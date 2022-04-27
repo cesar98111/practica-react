@@ -1,20 +1,21 @@
+import PropTypes from 'prop-types';
 const Card =({name, fecha}) =>{
-    let date = new Date(fecha);
-    let day = date.getDay();
-    let month = date.getMonth();
-    let year = date.getFullYear();
-    let actualDate = new Date();
-    let edad = actualDate.getFullYear()-date.getFullYear();
+    const date = new Date(fecha);
+    const day = date.getDay();
+    const month = date.getMonth();
+    const year = date.getFullYear();
+    const actualDate = new Date();
+    const edad = actualDate.getFullYear()-date.getFullYear();
+    
+    const semana =["domigo","lunes","martes","miercoles","jueves","viernes","sabado"];
+    const meses =["enero","febrero","marzo","abril","Mayo","junio","julio","agosto","septiembre"];
 
-    let semana =["domigo","lunes","martes","miercoles","jueves","viernes","sabado"];
-    let meses =["enero","febrero","marzo","abril","Mayo","junio","julio","agosto","septiembre"];
-
-    let dateString = `${semana[day]} del ${meses[month]} de ${year} `;
+    const dateString = `${semana[day]} del ${meses[month]} de ${year} `;
     
     
     return(
         
-        <div class = "card">
+        <div className = "card">
             <h4>Informacion</h4>
             <p>Nombre: {name}</p>
             <p>Fecha de nacimiento: {fecha}</p>
@@ -23,6 +24,11 @@ const Card =({name, fecha}) =>{
 
         </div>
     )
+}
+
+Card.propTypes ={
+    name: PropTypes.string.isRequired,
+    fecha: PropTypes.string.isRequired,
 }
 
 

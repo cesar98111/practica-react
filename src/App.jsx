@@ -4,7 +4,7 @@ const App = () =>{
     return(
     <>
     <Header title ='Tema 5 practica 01'/>
-    <Card name='paco' fecha='1998/06/23'/>
+    <Card name= 'paco' fecha='1998/06/23'/>
     </>
     )
 }

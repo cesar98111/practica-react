@@ -3,14 +3,14 @@ module.exports = {
       browser: true,
       es2021: true
     },
-    setting:{
+    settings:{
       react:{
-        version: "detected",
+        version: 'detected',
       },
     },
     extends: [
       'plugin:react/recommended',
-      'plugin:react/jsx-rutine',
+      'plugin:react/jsx-runtime',
       'standard',
       'eslint-config-prettier'
     ],
